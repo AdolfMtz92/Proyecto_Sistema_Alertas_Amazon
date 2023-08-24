@@ -14,8 +14,8 @@ class AlertService:
 
 def send_email(user_email, subject, message):
     # Datos de autenticación del correo
-    sender_email = "notificamazon@gmail.com"
-    sender_password = "ltjkqdzwxnjshsir"
+    sender_email = "correon@gmail.com"
+    sender_password = "password"
 
     # Configuración del servidor SMTP de Gmail
     smtp_server = "smtp.gmail.com"
