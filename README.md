@@ -4,21 +4,22 @@ Sistema de Alertas de Amazon
 Este script permite a los usuarios agregar productos y definir alertas de precios para recibir notificaciones cuando los productos caen por debajo del umbral de precio.
 
 Requiere las siguientes clases y módulos:
-    - Product: Clase que representa un producto de Amazon.
-    - User: Clase que representa un usuario con nombre y correo electrónico.
-    - Alert: Clase que define una alerta de precio para un producto.
-    - AlertService: Clase que gestiona las alertas y notificaciones.
-    - AmazonAPI: Clase para interactuar con la API de Amazon y obtener precios.
-
-Instrucciones de Uso:
-    - Ejecute este script y siga las instrucciones en la consola para agregar productos y alertas, y verificar alertas existentes.
+- `alert_service.py`: Define la clase `AlertService` que maneja las alertas y notificaciones por correo electrónico. En los métodos `send_email` de esta clase, asegúrate de especificar los datos de autenticación de la cuenta desde la cual se enviarán los correos de alerta. **Debes usar una cuenta de correo electrónico de GMAIL**.
+- `alert.py`: Contiene la clase `Alert` que representa una alerta con información sobre el usuario, el producto y el umbral de precio.
+- `amazon_api.py`: Contiene la clase `AmazonAPI` que interactúa con la API de Amazon para obtener precios de productos.
+- `decorators.py`: Proporciona un decorador para medir el tiempo de ejecución de funciones.
+- `product.py`: Define la clase `Product` que representa un producto y su información.
+- `user.py`: Define la clase `User` que almacena los datos del usuario.
+- `main.py`: El script principal donde se ejecuta la lógica principal del programa.
 
 """
 
+## Instrucciones de Uso:
+    - Ejecute este script y siga las instrucciones en la consola para agregar productos y alertas, y verificar alertas existentes.
 
-# Amazon Alert System
+## Amazon Alert System
 
-El Amazon Alert System es una aplicación que te permite rastrear el precio de productos en Amazon y recibir alertas por correo electrónico cuando el precio de un producto baja por debajo de un umbral específico.
+Amazon Alert System es una aplicación que te permite rastrear el precio de productos en Amazon y recibir alertas por correo electrónico cuando el precio de un producto baja por debajo de un umbral específico.
 
 ## Requisitos
 
