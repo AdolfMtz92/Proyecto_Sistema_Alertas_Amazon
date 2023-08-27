@@ -9,13 +9,13 @@ class AlertService:
         self.alerts.append(alert)
 
     def notify_user(self, alert):
-        message = f"El precio del producto {alert.product.name} ha disminuido. ¡Aprovecha la oferta!"
+        message = f"El precio del producto {alert.product.name} ha disminuido. ¡Aprovecha la oferta si tienes varo!"
         send_email(alert.user.email, "Alerta de Precio", message)
 
 def send_email(user_email, subject, message):
-    # Datos de autenticación del correo
-    sender_email = "correon@gmail.com"
-    sender_password = "password"
+    # Datos de autenticación del correo "Agregar los datos de una cuenta GMAIL"
+    sender_email = "notificamazon@gmail.com"
+    sender_password = "PASSWORD"
 
     # Configuración del servidor SMTP de Gmail
     smtp_server = "smtp.gmail.com"
