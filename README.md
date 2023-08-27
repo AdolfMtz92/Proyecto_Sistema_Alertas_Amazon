@@ -36,9 +36,8 @@ El Amazon Alert System es una aplicación que te permite rastrear el precio de p
 
 - Python 3.6 o superior
 - Bibliotecas requeridas (instalables mediante `pip`):
-  - `selenium`
   - `beautifulsoup4`
-  - `secure-smtplib`
+  - `smtplib`
   - `requests`
 
 ## Instalación
