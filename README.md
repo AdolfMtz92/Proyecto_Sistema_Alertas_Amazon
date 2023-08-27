@@ -21,12 +21,6 @@ Requiere las siguientes clases y módulos:
 ## Amazon Alert System
 
 Amazon Alert System es una aplicación que te permite rastrear el precio de productos en Amazon y recibir alertas por correo electrónico cuando el precio de un producto baja por debajo de un umbral específico.
-=======
-    - Product: Clase que representa un producto de Amazon.
-    - User: Clase que representa un usuario con nombre y correo electrónico.
-    - Alert: Clase que define una alerta de precio para un producto.
-    - AlertService: Clase que gestiona las alertas y notificaciones.
-    - AmazonAPI: Clase para interactuar con la API de Amazon y obtener precios.
 
 Instrucciones de Uso:
     - Ejecute este script y siga las instrucciones en la consola para agregar productos y alertas, y verificar alertas existentes.
@@ -37,7 +31,6 @@ Instrucciones de Uso:
 # Amazon Alert System
 
 El Amazon Alert System es una aplicación que te permite rastrear el precio de productos en Amazon y recibir alertas por correo electrónico cuando el precio de un producto baja por debajo de un umbral específico.
->>>>>>> 2c5a5540e4a06d2b19c2bb4ba3cc047cfdface04
 
 ## Requisitos
 
@@ -53,7 +46,7 @@ El Amazon Alert System es una aplicación que te permite rastrear el precio de p
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/AdolfMtz92/Proyecto_Amazon_Alert_Tracker.git
+   git clone https://github.com/AdolfMtz92/Proyecto_Sistema_Alertas_Amazon
    cd Proyecto_Amazon_Alert_Tracker```
 
 ## Uso
