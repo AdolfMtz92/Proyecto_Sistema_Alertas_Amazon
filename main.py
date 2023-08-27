@@ -1,7 +1,7 @@
-from alert_service import AlertService
 from product import Product
 from user import User
 from alert import Alert
+from alert_service import AlertService
 from amazon_api import AmazonAPI
 from decorators import measure_time
 
@@ -10,28 +10,42 @@ alert_service = AlertService()
 amazon_api = AmazonAPI()  # Declarar amazon_api aquí como global
 
 def main():
-    # Crear productos
-    product1 = Product("Product 1", "https://www.amazon.com.mx/SAMSUNG-Galaxy-A04-4GB_64GB-Blanco/dp/B0BJN6WRG9")
-    product2 = Product("Product 2", "https://www.amazon.com.mx/SAMSUNG-Galaxy-A04-4GB_64GB-Blanco/dp/B0BJN6WRG9")
-
-    # Crear usuarios
-    user1 = User("Adolfo", "agorjonmtz@hotmail.com")
-    user2 = User("Adolfo", "agorjonmtz@hotmail.com")
-
-    # Crear alertas
-    alert1 = Alert(user1, product1, 12000)
-    alert2 = Alert(user2, product2, 600)
-
-    # Agregar alertas al servicio
-    alert_service.add_alert(alert1)
-    alert_service.add_alert(alert2)
-
-    # Consultar precios y verificar alertas
-
-    process_alerts()
+    print("Bienvenido al sistema de alertas de Amazon")
+    
+    while True:
+        print("\nMenú:")
+        print("1. Agregar producto y alerta")
+        print("2. Verificar alertas")
+        print("3. Salir")
+        
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == "1":
+            agregar_producto_y_alerta()
+        elif opcion == "2":
+            verificar_alertas()
+        elif opcion == "3":
+            print("¡Hasta luego!")
+            break
+        else:
+            print("Opción no válida. Intente de nuevo.")
 
 @measure_time
-def process_alerts():
+def agregar_producto_y_alerta():
+    nombre_producto = input("Ingrese el nombre del producto: ")
+    url_producto = input("Ingrese la URL del producto en Amazon: ")
+    umbral_precio = float(input("Ingrese el umbral de precio: "))
+    
+    product = Product(nombre_producto, url_producto)
+    user = User(input("Ingrese su nombre: "), input("Ingrese su correo electrónico: "))
+    alert = Alert(user, product, umbral_precio)
+    
+    alert_service.add_alert(alert)
+    print("Producto y alerta agregados exitosamente.")
+
+@measure_time
+def verificar_alertas():
+    print("\nVerificando alertas...")
     for alert in alert_service.alerts:
         product_price = amazon_api.get_product_price(alert.product.url)
         if product_price is not None:
