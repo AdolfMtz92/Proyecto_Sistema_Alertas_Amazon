@@ -1,5 +1,3 @@
-# amazon_alert_system/src/utils/decorators.py
-
 import time
 
 def measure_time(func):
