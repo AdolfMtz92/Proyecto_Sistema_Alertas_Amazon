@@ -1,3 +1,24 @@
-venv/
+# Archivos de caché y respaldo
 __pycache__/
 *.pyc
+*.pyo
+*.bak
+*.swp
+
+# Carpetas de entornos virtuales
+venv/
+env/
+
+# Archivos de caché de IDEs
+.vscode/
+.idea/
+
+# Carpetas de construcción y distribución
+build/
+dist/
+
+# Archivos de log
+*.log
+
+# Directorio de caché de pruebas
+.pytest_cache/
