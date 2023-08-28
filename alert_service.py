@@ -1,6 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 
+
 class AlertService:
     def __init__(self):
         self.alerts = []
@@ -9,8 +10,12 @@ class AlertService:
         self.alerts.append(alert)
 
     def notify_user(self, alert):
-        message = f"El precio del producto {alert.product.name} ha disminuido. ¡Aprovecha la oferta si tienes varo!"
+        message = (
+            f"El precio del producto {alert.product.name} ha disminuido. "
+            "¡Aprovecha la oferta si tienes varo!"
+        )
         send_email(alert.user.email, "Alerta de Precio", message)
+
 
 def send_email(user_email, subject, message):
     # Datos de autenticación del correo "Agregar los datos de una cuenta GMAIL"
